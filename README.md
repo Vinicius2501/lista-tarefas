@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+[PR-BR]
+# 🎓 Lista de Tarefas — React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma **aplicação React simples** para **criar, editar e excluir uma lista de tarefas**, com persistência no `localStorage` do navegador. Foi desenvolvido como exercício prático do **módulo 14: React com Componentes de Classe** do curso:
 
-## Available Scripts
+> *"Javascript e TypeScript - front-end e back-end (Full Stack) - Node, Express, noSQL, React, hooks, Redux, Design Patterns"*
+> Autor: Luiz Otávio Miranda
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Adicionar** novas tarefas, evitando duplicatas e entradas vazias.
+- **Editar** tarefas existentes.
+- **Excluir** tarefas individualmente.
+- Dados são armazenados localmente no browser via **localStorage**, garantindo persistência entre sessões.
+- Interface simples e intuitiva com React Class Components.
+- Ícones funcionais para ações, utilizando a biblioteca `react-icons`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tecnologias e bibliotecas utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 19 (com componentes de classe)
+- react-icons (para ícones edit e delete)
+- PropTypes (validação de props)
+- CSS modular para estilização dos componentes
+- LocalStorage para persistência de dados
+- ESLint + Prettier para qualidade e padronização do código
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como rodar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone o repositório
+2. Execute `npm install` para instalar dependências
+3. Execute `npm start` para rodar o app no modo desenvolvimento
+4. Abra `http://localhost:3000` no navegador
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Observações técnicas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- O estado da aplicação é mantido no componente `Main`, incluindo a lista de tarefas e o índice da tarefa em edição.
+- Utiliza o método `componentDidMount` para carregar tarefas do localStorage e `componentDidUpdate` para salvar alterações.
+- O método `handleDelete` manipula a remoção da tarefa no estado de forma imutável.
+- Validação simples evita inclusão de tarefas vazias ou repetidas.
+- PropTypes garantem tipagem mínima para componentes funcionais.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Referência
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Curso completo de Luiz Otávio Miranda disponível em Udemy:
+> *Javascript e TypeScript - front-end e back-end (Full Stack) - Node, Express, noSQL, React, hooks, Redux, Design Patterns*
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[EN]
+# 🎓 Task List — React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is a **simple React application** to **create, edit, and delete a task list**, with data persistence in the browser's `localStorage`. It was developed as a practical exercise from **módulo 14: React com Componentes de Classe** of the course:
 
-### Code Splitting
+> *"Javascript e TypeScript - front-end e back-end (Full Stack) - Node, Express, noSQL, React, hooks, Redux, Design Patterns"*
+> Author: Luiz Otávio Miranda
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Add** new tasks, avoiding duplicates and empty entries.
+- **Edit** existing tasks.
+- **Delete** tasks individually.
+- Data is stored locally in the browser via **localStorage**, ensuring persistence between sessions.
+- Simple and intuitive interface using React Class Components.
+- Functional icons for actions using the `react-icons` library.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies and libraries used
 
-### Advanced Configuration
+- React 19 (with class components)
+- react-icons (for edit and delete icons)
+- PropTypes (for prop validation)
+- Modular CSS for component styling
+- LocalStorage for data persistence
+- ESLint + Prettier for code quality and formatting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## How to run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Clone the repository
+2. Run `npm install` to install dependencies
+3. Run `npm start` to start the app in development mode
+4. Open `http://localhost:3000` in your browser
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technical notes
+
+- The application state is managed in the `Main` component, including the task list and the index of the task being edited.
+- Uses `componentDidMount` to load tasks from localStorage and `componentDidUpdate` to save changes.
+- The `handleDelete` method handles task removal immutably.
+- Simple validation prevents adding empty or duplicate tasks.
+- PropTypes provide minimal type checking for functional components.
+
+---
+
+## Reference
+
+> Full course by Luiz Otávio Miranda available on Udemy:
+> *Javascript e TypeScript - front-end e back-end (Full Stack) - Node, Express, noSQL, React, hooks, Redux, Design Patterns*
